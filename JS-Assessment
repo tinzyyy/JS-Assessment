@@ -1,0 +1,33 @@
+ let nftCount = 0;
+ 
+ function  mintNFT(fruit,shape,color) {
+    const nft = {
+        "fruit": fruit,
+        "shape": shape,
+        "color": color
+    }
+
+    nftCount++;
+    return nft;
+ }
+ function listNFTs(nfts){
+    for (let i = 0; i < nfts.length; i++){
+        console.log("Fruit: " + nfts[i].fruit);
+        console.log("Shape:" + nfts[i].shape);
+        console.log("Color:" + nfts[i].color);
+        console.log("************************");
+    }
+ }
+ function getTotalSupply(){
+    console.log("Total NFTs minted:" + nftCount);
+ }
+ const nft1 = mintNFT("Grapes", "Circle", "Violet" );
+ const nft2 = mintNFT("Cherry", "Heart", "Red" );
+ const nft3 = mintNFT("Avocado", "Oval", "Green" );
+ const nft4 = mintNFT("Watermelon", "Circle", "Green" );
+
+ const nfts = [nft1, nft2, nft3, nft4];
+ 
+ listNFTs(nfts);
+
+ getTotalSupply();
